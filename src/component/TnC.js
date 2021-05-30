@@ -34,7 +34,7 @@ const TnC = () => {
   const classes = useStyle();
 
   return (
-    <div className={classes.forthContainer}>
+    <section className={classes.forthContainer}>
       <div className="content">
         <Typography variant="h6" color="secondary">
           Terms & Conditions of the Contest
@@ -43,12 +43,12 @@ const TnC = () => {
         <ol>
 					{
 						TNCLIST.map((list, index) =>
-							<li>{list}</li>
+							<li key={`${index}1`}>{list}</li>
 						)
 					}
 				</ol>
       </div>
-    </div>
+    </section>
   );
 };
 

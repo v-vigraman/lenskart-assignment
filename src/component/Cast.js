@@ -69,6 +69,15 @@ const useStyle = makeStyles((theme) => ({
       "& .shadeImage": {
         width: "200px",
       },
+      "& .shadeTitle": {
+        textAlign: "center",
+        marginTop: "20px",
+      },
+      "& .shadeContent": {
+        textAlign: "center",
+        marginTop: "5px",
+        marginBottom: "20px",
+      },
     },
   },
 }));
@@ -76,14 +85,14 @@ const useStyle = makeStyles((theme) => ({
 const Cast = () => {
   const classes = useStyle();
   return (
-    <div className={classes.secondContainer}>
+    <section className={classes.secondContainer}>
       <div className="secondContent">
         <div className="contentCenter">
           <div className="boldHeading">BOLD, DARING & STURDY</div>
           <Typography variant="h6" color="secondary">
             These Pilots are perfect for that Grunge Look
           </Typography>
-          <DividerMark variant='middle' />
+          <DividerMark variant="middle" />
         </div>
         <div className="rowBlock">
           <div className="columnBlock">
@@ -100,14 +109,19 @@ const Cast = () => {
               is a millionare carpet exporter and the mafia don of mirzapur
             </Typography>
             <div className="shadeImage">
-              <img src={Shades} width="100%" />
+              <figure>
+                <img src={Shades} width="100%" alt="shades" />
+              </figure>
             </div>
-            <Typography component="p" color="secondary" className="innerText">
+            <Typography component="p" color="secondary" className="shadeTitle">
               VINCENT CHASE
-              <br />
-              <Typography component="p" color="secondary">
-                Golden Green Full Rim
-              </Typography>
+            </Typography>
+            <Typography
+              component="p"
+              color="secondary"
+              className="shadeContent"
+            >
+              Golden Green Full Rim
             </Typography>
             <Button
               className={classes.btn}
@@ -132,14 +146,20 @@ const Cast = () => {
               father's legacy
             </Typography>
             <div className="shadeImage">
-              <img src={Shades} width="100%" />
+              <figure>
+                <img src={Shades} width="100%" alt="shades" />
+              </figure>
             </div>
-            <Typography variant="p" color="secondary" className="innerText">
+            <Typography component="p" color="secondary" className="shadeTitle">
               VINCENT CHASE
               <br />
-              <Typography variant="p" color="secondary">
-                Black Grey Full Rim
-              </Typography>
+            </Typography>
+            <Typography
+              component="p"
+              color="secondary"
+              className="shadeContent"
+            >
+              Black Grey Full Rim
             </Typography>
             <Button
               className={classes.btn}
@@ -164,14 +184,20 @@ const Cast = () => {
               crime in the city
             </Typography>
             <div className="shadeImage">
-              <img src={Shades} width="100%" />
+              <figure>
+                <img src={Shades} width="100%" alt="shades" />
+              </figure>
             </div>
-            <Typography variant="p" color="secondary" className="innerText">
+            <Typography component="p" color="secondary" className="shadeTitle">
               VINCENT CHASE
               <br />
-              <Typography variant="p" color="secondary">
-                Golden Brown Full Rim
-              </Typography>
+            </Typography>
+            <Typography
+              component="p"
+              color="secondary"
+              className="shadeContent"
+            >
+              Golden Brown Full Rim
             </Typography>
             <Button
               className={classes.btn}
@@ -183,7 +209,7 @@ const Cast = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
