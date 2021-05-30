@@ -1,28 +1,53 @@
-import { Button, makeStyles, Typography } from '@material-ui/core';
-import './App.css';
+import { Avatar, Button, Divider, makeStyles, Typography } from "@material-ui/core";
 
-import Shades from './assets/jpg/shades.jpg';
-
+import MainBackground from "./assets/jpg/mrjapure-season-2.jpg";
+import "./App.css";
+import Cast from "./component/Cast";
+import TnC from "./component/TnC";
 
 const useStyle = makeStyles((theme) => ({
   app: {
     // background: theme.palette.primary.main
   },
-  btn: {
-    borderRadius: '100px',
-    color: 'black',
-    fontWeight:'600',
-    fontSize:'12px',
-    '&:hover': {
-      color: 'black'
+  homeWrapper: {
+    width: "100%",
+    backgroundColor: "black",
+    height: "auto",
+    "& .homeContent": {
+      width: "100%",
+      minWidth: "1000px",
+      background: `url(${MainBackground}) no-repeat`,
+      backgroundSize: "100% 100%",
+      margin: "0 auto",
+      height: "500px",
+    },
+  },
+  thirdContainer: {
+    width: '100%',
+    background: 'black',
+    height: 'auto',
+    padding: '60px',
+    paddingTop: 0,
+    boxSizing: 'border-box',
+    '& .thirdContent': {
+      width: '100%',
+      maxWidth: '1324px',
+      minWidth: '1000px',
+      margin: '0 auto',
+      minHeight: '300px',
+      backgroundColor: 'rgb(37, 36, 36)',
+      padding: '40px',
+      background: `url(${MainBackground}) no-repeat`,
+      backgroundSize: '100% 100%',
+      boxSizing: 'border-box',
     }
   },
-  innerText: {
-    textAlign:'center',
-    marginTop:'20px',
-    marginBottom:'20px'
-  }
-  
+  btn: {
+    borderRadius: "100px",
+    color: "black",
+    fontWeight: "600",
+    fontSize: "12px",
+  },
 }));
 
 function App() {
@@ -30,78 +55,14 @@ function App() {
 
   return (
     <div className={classes.app}>
-
-      <div className="homeWrapper">
+      <div className={classes.homeWrapper}>
         <div className="homeContent"></div>
       </div>
-      <div className="secondContainer">
-        <div className="secondContent">
-          <div className="contentCenter">
-            <div className="boldHeading">BOLD, DARING & STURDY</div>
-            <Typography variant="h6" color='secondary'>
-              These Pilots are perfect for that Grunge Look
-           </Typography>
-          </div>
-          <div className="rowBlock">
-            <div className="columnBlock">
-              <div className="roundBlock">
-              </div>
-              <Typography variant="p" color='secondary' className={classes.innerText}>
-             The  iron-fisted   <Typography variant="p" color='primary' textAlign="center">Akhandanand Tripathi </Typography> 
-             is a millionare carpet exporter and the mafia don  of mirzapur
-           </Typography>
-           <img src={Shades} width="200px" />
-           <Typography variant="p" color='secondary' className={classes.innerText}>
-             VINCENT CHASE<br/>
-             <Typography variant="p" color='secondary'>
-             GOLDEN GREEN FULL RIM
-           </Typography>
-           </Typography>
-           <Button className={classes.btn} color='secondary'  variant='contained'>Watch Now</Button>
-            </div>
-            <div className="columnBlock">
-              <div className="roundBlock">
-              </div>
-              <Typography variant="p" color='secondary' className={classes.innerText}>
-             The  iron-fisted   <Typography variant="p" color='primary' textAlign="center">Akhandanand Tripathi </Typography> 
-             is a millionare carpet exporter and the mafia don  of mirzapur
-           </Typography>
-           <img src={Shades} width="200px" />
-           <Typography variant="p" color='secondary' className={classes.innerText}>
-             VINCENT CHASE<br/>
-             <Typography variant="p" color='secondary'>
-             GOLDEN GREEN FULL RIM
-           </Typography>
-           </Typography>
-           <Button className={classes.btn} color='secondary'  variant='contained'>Watch Now</Button>
-            </div>
-            <div className="columnBlock">
-              <div className="roundBlock">
-              </div>
-              <Typography variant="p" color='secondary' className={classes.innerText}>
-             The  iron-fisted   <Typography variant="p" color='primary' textAlign="center">Akhandanand Tripathi </Typography> 
-             is a millionare carpet exporter and the mafia don  of mirzapur
-           </Typography>
-           <img src={Shades} width="200px" />
-           <Typography variant="p" color='secondary' className={classes.innerText}>
-             VINCENT CHASE<br/>
-             <Typography variant="p" color='secondary'>
-             GOLDEN GREEN FULL RIM
-           </Typography>
-           </Typography>
-           <Button className={classes.btn} color='secondary'  variant='contained'>Watch Now</Button>
-            </div>
-
-          </div>
-        </div>
+      <Cast/>
+      <div className={classes.thirdContainer}>
+        <div className="thirdContent"></div>
       </div>
-  
-        <div className="thirdContainer">
-          <div className="thirdContent">
-
-          </div>
-        </div>
-  
+      <TnC/>
     </div>
   );
 }
