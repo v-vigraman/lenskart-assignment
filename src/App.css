@@ -44,17 +44,17 @@
 }
 
 .thirdContent{
-  width: 100%;
-  max-width: 1324px;
-  min-width: 1000px;
-  margin: 0 auto;
-  min-height: 300px;
-  background-color:rgb(37, 36, 36);
-  padding: 40px;
-  background:url('../src/assets/jpg/mrjapure-season-2.jpg') no-repeat;
-  background-size: 100% 100%;
- 
-  box-sizing: border-box;
+      width: 100%;
+      max-width: 1324px;
+      min-width: 1000px;
+      margin: 0 auto;
+      min-height: 300px;
+      background-color:rgb(37, 36, 36);
+      padding: 40px;
+      background:url('../src/assets/jpg/mrjapure-season-2.jpg') no-repeat;
+      background-size: 100% 100%;
+
+      box-sizing: border-box;
 }
 
 .boldHeading{
